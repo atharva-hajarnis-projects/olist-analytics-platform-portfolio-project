@@ -1,0 +1,44 @@
+@'
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p8
+*.key
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+!terraform/environments/*.tfvars
+.terraform.lock.hcl
+
+# dbt
+dbt/**/target/
+dbt/**/dbt_packages/
+dbt/**/logs/
+profiles.yml
+!profiles.yml.example
+
+# Airflow
+airflow/logs/
+airflow.db
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+'@ | Set-Content -Encoding utf8 .gitignore
